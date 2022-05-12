@@ -1,0 +1,48 @@
+// COLOR PALETTE
+$clr1: #000000;
+$clr2: #fff;
+$clr3: #ddd;
+$clr4: #fff7f7;
+$clr5: #222222;
+$clr6: radial-gradient(
+  circle at center,
+  #ff385c 0%,
+  #e61e4d 27.5%,
+  #e31c5f 40%,
+  #d70466 57.5%,
+  #bd1e59 75%,
+  #bd1e59 100%
+);
+$clr7: #717171;
+$clr8: #ff385c;
+
+//base
+$tl-font-size: 32px;
+$tl-font-weight: 600;
+$tl-letter-spacing: -0.02em;
+$tl-line-height: 36px;
+// LAYOUT
+$layoutPaddingWide: 80px;
+$layoutPaddingNormal: 40px;
+$layoutPaddingNarrow: 24px;
+$layoutPaddingMobile: 24px;
+$layoutPaddingLgMobile: 30px;
+
+// LAYOUT BREAKPOINTS
+$break-mobile: 376px;
+$break-lg-mobile: 400px;
+$break-narrow: 743px;
+$break-normal: 949px;
+$break-wide: 1128px;
+
+$padded-break-mobile: $break-mobile + $layoutPaddingMobile *
+  2;
+
+$padded-break-mobile: $break-lg-mobile +
+  $layoutPaddingLgMobile * 2;
+
+$padded-break-narrow: $break-narrow + $layoutPaddingNarrow *
+  2;
+$padded-break-normal: $break-normal + $layoutPaddingNormal *
+  2;
+$padded-break-wide: $break-wide + $layoutPaddingWide * 2;

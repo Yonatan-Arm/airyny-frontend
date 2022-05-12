@@ -1,0 +1,35 @@
+@mixin for-wide-layout {
+  @media (max-width: $break-wide) {
+    @content;
+  }
+}
+
+@mixin for-normal-layout {
+  @media (max-width: $break-normal) {
+    @content;
+  }
+}
+
+@mixin for-narrow-layout {
+  @media (max-width: $break-narrow) {
+    @content;
+  }
+}
+@mixin for-lg-mobile-layout {
+  @media (max-width: $break-lg-mobile) {
+    @content;
+  }
+}
+
+@mixin for-mobile-layout {
+  @media (max-width: $break-mobile) {
+    @content;
+  }
+}
+
+@mixin layoutGTC($max) {
+  grid-template-columns: minmax($layoutPadding, 1fr) minmax(
+      auto,
+      $max
+    ) minmax($layoutPadding, 1fr);
+}

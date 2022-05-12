@@ -1,0 +1,30 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050"
+  },
+  "dependencies": {
+    "@fawmi/vue-google-maps": "^0.9.4",
+    "axios": "^0.26.1",
+    "chart.js": "^3.7.1",
+    "element": "^0.1.4",
+    "element-plus": "^2.1.4",
+    "quasar": "^2.6.1",
+    "sass": "^1.49.9",
+    "socket.io-client": "^4.4.1",
+    "v-calendar": "^3.0.0-alpha.8",
+    "vue": "^3.2.31",
+    "vue-chart-3": "^3.1.8",
+    "vue-router": "^4.0.12",
+    "vue3-gmap-custom-marker": "^0.0.2",
+    "vue3-histogram-slider": "^0.4.16",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.2.2",
+    "vite": "^2.8.4"
+  }
+}

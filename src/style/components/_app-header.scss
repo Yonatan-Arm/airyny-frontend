@@ -1,0 +1,678 @@
+.main-header.fullHeader {
+  grid-template-rows: 1fr 1fr;
+  height: 120px;
+  top: 0px;
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  width: 100%;
+  z-index: 20;
+  background-color: transparent;
+  position: absolute;
+  .world-svg {
+    fill: white;
+  }
+  @include for-narrow-layout {
+    margin: auto;
+    visibility: hidden;
+    top: 0px;
+    justify-content: end;
+
+    .profile-btn {
+      visibility: initial;
+      margin-inline-start: 10px;
+      margin-inline-end: -59px;
+      display: flex;
+      align-items: center;
+      margin-block-start: -27px;
+      fill: #717171;
+      @include for-narrow-layout {
+        display: none;
+      }
+    }
+    .mini-filter-container {
+      display: block !important;
+      min-width: 100vw;
+    }
+  }
+  @include for-normal-layout {
+    .mini-filter-container {
+      display: block !important;
+    }
+  }
+  .filter-mobile {
+    opacity: 1;
+    @include for-mobile-layout {
+      opacity: 1;
+      margin-left: 100px;
+      width: 150px;
+      .mini-filter {
+        opacity: 0;
+        visibility: hidden !important;
+      }
+    }
+    @include for-narrow-layout {
+      .mini-filter {
+        opacity: 0;
+        visibility: hidden !important;
+      }
+      margin-left: 100px;
+      width: 100vh;
+      opacity: 1;
+      display: block;
+      height: 100vh;
+    }
+  }
+
+  .main-header {
+    margin: 0px;
+  }
+  .mini-filter {
+    display: flex;
+  }
+  &.header-explore {
+    .world-svg {
+      fill: #222222;
+    }
+    .filter {
+      display: none;
+    }
+  }
+  .world-img {
+    display: none;
+  }
+  .header-details {
+    .world-img {
+      display: block !important;
+    }
+    .mini-filter {
+      display: none;
+    }  
+  }
+  .header-features {
+    color: $clr2;
+    align-items: center;
+    height: 80px;
+    .mini-filter {
+      display: flex;
+    }
+  }
+}
+.main-header.fix {
+  position: fixed;
+  z-index: 20;
+  background-color: $clr2;
+  top: 0;
+  width: 100%;
+  height: rem(80px);
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 80px 1fr 80px;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08) !important;
+  align-items: center;
+  .world-btn.world-svg {
+    display: none;
+  }
+  .mini-filter {
+    visibility: visible;
+  }
+  .logo {
+    visibility: visible;
+  }
+  a {
+    color: $clr5 !important;
+    text-shadow: none;
+    font-weight: 600;
+    font-size: rem(14px);
+  }
+  .logo {
+    content: url("https://res.cloudinary.com/yonatan-cajan22/image/upload/v1648055648/airyny/logo2.png");
+    height: rem(70px);
+    width: rem(140px);
+  }
+  .world-btn {
+    height: 2.61875rem;
+    width: 2.8125rem;
+    border: 0px;
+    display: block !important;
+    .world-svg {
+      fill: unset;
+      color: #222222;
+    }
+  }
+
+  @include for-narrow-layout {
+    display: block;
+    width: 100vw;
+    display: flex;
+    justify-items: center;
+    .logo-container {
+      display: none;
+    }
+    .mini-filter-container {
+      display: block !important;
+    }
+    .explore-details-header {
+      display: block;
+    }
+  }
+  @include for-normal-layout {
+    .mini-filter-container {
+      display: block;
+    }
+  }
+}
+
+.main-header > * {
+  grid-column: 2;
+}
+
+.logo {
+  text-decoration: none;
+  width: rem(110px);
+  height: rem(45px);
+  cursor: pointer;
+  object-fit: cover;
+  top: rem(15px);
+  margin-left: rem(-7px);
+}
+
+.places {
+  font-weight: 400;
+  color: $clr2;
+  background-color: $clr1;
+  cursor: pointer;
+}
+
+.world-btn {
+  height: rem(41.9px);
+  width: rem(45px);
+  border: 0px;
+  background-color: inherit;
+  text-align: -webkit-center;
+  margin-left: 6px;
+  margin-right: 6px;
+  padding: 0px;
+  .world-svg {
+    fill: #222222;
+  }
+  .world-img {
+    width: rem(19px);
+  }
+}
+
+.menu-btns {
+  justify-content: center;
+  a {
+    font-family: Cereal-Regular;
+    color: $clr2;
+    text-shadow: 1px 1px 2px #000;
+    padding-left: 15px;
+    font-size: 16px;
+  }
+}
+
+.profile-btn {
+  width: rem(77px);
+  height: rem(42px);
+  appearance: none;
+  background: transparent;
+  background-color: $clr2;
+  border: 1px solid $clr3;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px 5px 15px;
+  border-radius: 200px;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  .menu-img {
+    width: rem(16px);
+    height: rem(16px);
+    stroke-width: 3;
+  }
+  .profile-img {
+    width: rem(30px);
+    height: rem(30px);
+    margin-left: rem(12px);
+  }
+  @include for-narrow-layout {
+    display: none;
+  }
+}
+
+.menu-btns.header-fix {
+  a {
+    color: $clr5 !important;
+    text-shadow: none;
+    font-weight: 600;
+  }
+}
+
+.upper-section-header-details.main-header.fix {
+  background-color: transparent;
+  box-shadow: unset;
+  color: #ddd;
+  height: 5rem;
+  position: unset;
+  display: block;
+  & .main-header.fix {
+    @include for-normal-layout {
+      grid-template-columns: 40px 1fr 40px;
+      padding: 0 2.5rem;
+    }
+  }
+  @include for-narrow-layout {
+    display: none;
+  }
+
+  .main-header.fullHeader{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 5rem;
+    display: block;
+    position: static;
+    @include for-wide-layout {
+      position: fixed;
+      padding: 0 2.5rem;
+    }
+    @include for-normal-layout {
+      position: fixed;
+      padding: 0 2.5rem;
+    }
+  }
+  .main-header.fix {
+    .mini-filter-container .mini-filter {
+      top: 50%;
+    }
+  }
+  .filter {
+    display: none;
+  }
+  .mini-filter-container .mini-filter {
+    top: unset;
+  }
+  .main-header.fullHeader.header-mobile-filter {
+    @include for-normal-layout {
+      grid-template-columns: 40px 1fr 40px;
+      padding: 0 2.5rem;
+    }
+
+    @include for-narrow-layout {
+      display: none;
+    }
+  }
+  .header-details {
+    display: block;
+    top: 0;
+    position: static !important;
+    color: $clr3;
+    height: 80px !important;
+    transition: 0s;
+    .main-filter {
+      color: $clr5;
+      display: none;
+    }
+    .filter.hide {
+      visibility: unset;
+      position: static;
+      display: flex;
+      transform: unset;
+    }
+    .mini-filter {
+      visibility: visible;
+      top: 40px;
+      z-index: 40;
+      position: absolute;
+    }
+    a {
+      color: $clr5 !important;
+      text-shadow: none;
+      font-weight: 600;
+      font-size: rem(14px);
+    }
+    .logo {
+      content: url("https://res.cloudinary.com/yonatan-cajan22/image/upload/v1648055648/airyny/logo2.png");
+      height: rem(70px);
+      width: rem(140px);
+    }
+    .world-btn {
+      height: 2.61875rem;
+      width: 2.8125rem;
+      border: 0px;
+      display: block !important;
+      .world-svg {
+        fill: unset;
+        color: #222222;
+      }
+    }
+  }
+  @include for-narrow-layout {
+    .explore-details-header {
+      display: block !important;
+    }
+
+  }
+}
+
+.upper-section-header-explore {
+  background-color: transparent;
+  box-shadow: 0 1px 12px rgb(0 0 0 / 8%);
+  color: #ddd;
+  .main-header.fullHeader{
+    position:inherit;
+  }
+  
+  @include for-narrow-layout {
+    .profile-btn {
+      display: none !important;
+    }
+  }
+  .main-header.fullHeader{
+    .mini-filter {
+     top: 40px;
+    }
+  }
+ 
+  .header-details {
+    display: block;
+    top: 0;
+    position: fixed !important;
+    color: $clr3;
+    height: 80px !important;
+    transition: 0s;
+    .main-filter {
+      color: $clr5;
+      display: none;
+    }
+    @include for-narrow-layout {
+      display: block !important;
+      .profile-btn {
+        display: none !important;
+      }
+    }
+    .filter {
+      visibility: hidden;
+    }
+    .filter.hide {
+      visibility: unset;
+      position: static;
+      display: flex;
+      transform: unset;
+      .main-filter {
+        display: flex;
+      }
+    }
+    .mini-filter {
+      top: 40px;
+      z-index: 40;
+      position: absolute;
+    }
+    a {
+      color: $clr5 !important;
+      text-shadow: none;
+      font-weight: 600;
+      font-size: rem(14px);
+    }
+    .logo {
+      content: url("https://res.cloudinary.com/yonatan-cajan22/image/upload/v1648055648/airyny/logo2.png");
+      height: rem(70px);
+      width: rem(140px);
+    }
+    .world-btn {
+      height: 2.61875rem;
+      width: 2.8125rem;
+      border: 0px;
+      display: block !important;
+      .world-svg {
+        fill: unset;
+        color: #222222;
+      }
+    }
+    .explore-details-header {
+      display: block;
+    }
+  }
+  @include for-narrow-layout {
+    display: block !important;
+  }
+}
+.header-mobile-filter{
+  @include for-narrow-layout {
+    display: none ;
+  }
+
+}
+.main-header.fix.header-details {
+  .filter.hide {
+    display: none !important;
+  }
+}
+
+.header-explore {
+  position: fixed;
+  max-width: 1600px;
+  .main-header {
+    position: fixed;
+    z-index: 20;
+    background-color: $clr2;
+    top: 0;
+    width: 100%;
+    height: rem(80px);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 80px 1fr 80px;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08) !important;
+    padding: rem(15px);
+    align-items: center;
+  }
+  a {
+    color: $clr5 !important;
+    text-shadow: none;
+    font-weight: bold;
+  }
+  .logo-container {
+    width: 130px;
+  }
+  .logo {
+    content: url("https://res.cloudinary.com/yonatan-cajan22/image/upload/v1648055648/airyny/logo2.png");
+    height: rem(70px);
+    width: rem(140px);
+  }
+  .layout {
+    color: black !important;
+    height: rem(19px);
+  }
+  .header-fix {
+    .world-svg {
+      display: block !important;
+    }
+  }
+  
+
+}
+
+.user-details {
+  position: fixed;
+  .main-header {
+    position: fixed;
+    z-index: 20;
+    background-color: $clr2;
+    top: 0;
+    width: 100%;
+    height: rem(80px);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 80px 1fr 80px;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08) !important;
+    padding: rem(15px);
+    align-items: center;
+  }
+  a {
+    color: $clr5 !important;
+    text-shadow: none;
+    font-weight: bold;
+  }
+  .logo-container {
+    width: 130px;
+  }
+  .logo {
+    content: url("https://res.cloudinary.com/yonatan-cajan22/image/upload/v1648055648/airyny/logo2.png");
+    height: rem(70px);
+    width: rem(140px);
+  }
+  .filter {
+    visibility: hidden;
+  }
+  .mini-filter {
+    visibility: hidden;
+  }
+}
+
+.filter-mobile {
+  display: none;
+  @include for-narrow-layout {
+    z-index: 200;
+    background-color: #ebebeb;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    max-width: 100%;
+    height: 100vh;
+    align-items: flex-start;
+    @keyframes change {
+      from {bottom:-300px}
+      to {bottom: 0}
+    }
+    animation-name: change;
+    animation-duration: .5s;
+
+    .mobile-filter-container{
+     width: 100%;
+    }
+
+    .back-homepage{
+      align-self: flex-start;
+      margin-bottom: rem(20px);
+      margin-top: rem(20px);
+    }
+
+  form {
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    font-size: 20px;
+  }
+  input {
+    width: 90%;
+    height: rem(60px);
+    background-color: transparent;
+    border-bottom: 1px solid rgb(176, 176, 176, 1);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 12px;
+  }
+  button {
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    margin-right: 5px;
+    background: transparent;
+    margin-top: 20px;
+  }
+  input:focus-visible {
+    outline: rgba(255, 255, 255, 0);
+    outline-offset: 3px;
+  }
+  .search-btn {
+    display: flex;
+    margin-top: 20px;
+    margin-right: 5px;
+    justify-content: center;
+    align-items: center;
+    color: $clr2;
+    border-radius: 50%;
+    border: none;
+    background-color: #ff385c;
+    height: 32px;
+    width: 32px;
+    margin-inline-end: 4px;
+    button {
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+      margin: 0;
+    }
+  }
+  .info-mobile-filter{
+    font-size: 14px ;
+    line-height: 18px ;
+    font-weight: 700 ;
+    padding: 15px 12px ;
+    color: #222222;
+
+
+  }
+}
+}
+.filter-mobile.fix {
+  position: fixed;
+  inset: 0px;
+}
+
+.container-check {
+  .input-container:hover {
+    background-color: #ebebeb;
+    width: 300px !important;
+  }
+  display: flex;
+  font-weight: bold;
+  font-family: Cereal-Regular;
+  color: #222222;
+  font-size: 12px !important;
+  width: 100% !important;
+  align-content: stretch;
+  justify-content: space-evenly;
+
+  .container-check-in-out {
+    display: flex;
+    width: 317px;
+    justify-content: flex-start;
+    margin-left: 2px;
+    flex-direction: row;
+    align-content: center;
+  }
+
+  .btn-check-in {
+    margin-bottom: -3px;
+    height: 20px;
+    margin-right: 13px;
+    width: 50%;
+  }
+  .btn-check-out {
+    width: 50%;
+    height: 20px;
+    margin-top: 0px;
+  }
+}
+
+.main-time-picker {
+  .el-date-editor .el-range-input {
+    font-family: Cereal-Regular;
+    -webkit-appearance: none;
+    padding: -1px;
+    margin-top: 36px;
+    margin-right: -126px;
+    margin-bottom: 41px;
+    margin-left: -65px;
+    font-family: Cereal-Regular;
+    color: #222222;
+    font-size: 14px !important;
+    line-height: 42px;
+  }
+  .el-date-editor .el-range-input::placeholder {
+    color: #717171;
+  }
+}
+

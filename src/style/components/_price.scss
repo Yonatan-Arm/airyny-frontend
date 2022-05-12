@@ -1,0 +1,39 @@
+.irs-line {
+    background-color: none !important;
+}
+
+.irs-to {
+    display: none !important;
+}
+
+.irs-with-grid .irs-grid {
+    display: none;
+}
+
+.irs--round .irs-from,
+.irs--round .irs-single,
+.irs--round .irs-to.irs-form {
+    display: none !important;
+}
+
+.irs-bar {
+    line-height: 3px !important;
+    height: 2px
+}
+
+.irs--round .irs-line {
+    top: 36px;
+}
+
+.irs--round .irs-bar {
+    height: 2px;
+}
+
+.irs--round .irs-line {
+    height: 2px;
+}
+
+.vue-histogram-slider-bar-vue-histogram-8a6c6076-a351-4765-b3b0-4325b9bd5c8f {
+    width: 5px;
+    border-radius: 0px;
+}

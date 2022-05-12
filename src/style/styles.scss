@@ -1,0 +1,25 @@
+//SETUP
+@import "setup/typography";
+@import "setup/variables.scss";
+@import "setup/functions.scss";
+@import "setup/mixins";
+// BASICS
+@import "basics/helpers";
+@import "basics/base";
+@import "basics/layout";
+// components
+@import "components/map-details";
+@import "components/home-list";
+@import "components/stay-filter";
+@import "components/date-picker";
+@import "components/price";
+@import "components/stay-list";
+@import "components/stay-card";
+@import "components/app-header";
+@import "components/stay-details";
+@import "components/home-page";
+@import "components/user-modal";
+@import "components/user-details";
+@import "components/login-modal";
+@import "components/_pop-app-msg";
+@import "components/footer";
