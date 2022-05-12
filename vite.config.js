@@ -14,7 +14,7 @@ export default defineConfig({
     },
     build: {
         chunkSizeWarningLimit: 2000,
-        outDir: '../backend/airyny-backend/public',
+        outDir: '../backend/public',
         emptyOutDir: true
     }
 })
